@@ -1,0 +1,218 @@
+h1.pod-title {
+    font-family: elza, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+button.play-icon {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+    width: 60px;
+    height: 60px;
+    float: left;
+    background-size: cover;
+}
+
+button.mute-icon {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+    height: 20px;
+    width: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    float: right;
+    margin-left: 10px;
+}
+
+.audio-player-container {
+    --seek-before-width: 0%;
+    --volume-before-width: 100%;
+    --buffered-width: 0%;
+    position: relative;
+    margin: 5px 2.5% 5px 2.5%;
+    width: 95%;
+    height: 160px;
+    background: #fff;
+}
+
+p {
+    position: absolute;
+    top: -18px;
+    right: 5%;
+    padding: 0 5px;
+    margin: 0;
+    background: #fff;
+}
+
+path {
+    stroke: #007db5;
+}
+
+.time {
+    display: inline-block;
+    width: 37px;
+    text-align: center;
+    margin: 14px 0 18.5px 0;
+    float: left;
+}
+
+output {
+    display: inline-block;
+    width: 32px;
+    text-align: center;
+    margin: 10px 2.5% 0 5%;
+    float: left;
+    clear: left;
+}
+
+input[type="range"].volume-slider {
+    width: 100px;
+    margin: 0;
+    display: block;
+    float: right;
+}
+
+.volume-slider::-webkit-slider-runnable-track {
+    background: rgba(0, 125, 181, 0.6);
+}
+
+.volume-slider::-moz-range-track {
+    background: rgba(0, 125, 181, 0.6);
+}
+
+.volume-slider::-ms-fill-upper {
+    background: rgba(0, 125, 181, 0.6);
+}
+
+.volume-slider::before {
+    width: var(--volume-before-width);
+}
+
+input[type="range"] {
+    position: relative;
+    -webkit-appearance: none;
+    margin: 0;
+    padding: 0;
+    height: 19px;
+    float: left;
+    outline: none;
+    width: 100%;
+    margin: 16px 0 18.5px 0;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 3px;
+    cursor: pointer;
+    background: linear-gradient(to right, rgba(0, 125, 181, 0.6) var(--buffered-width), rgba(0, 125, 181, 0.2) var(--buffered-width));
+}
+
+input[type="range"]::before {
+    position: absolute;
+    content: "";
+    top: 8px;
+    left: 0;
+    width: var(--seek-before-width);
+    height: 3px;
+    background-color: #007db5;
+    cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    position: relative;
+    -webkit-appearance: none;
+    box-sizing: content-box;
+    border: 0;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+    margin: -7px 0 0 0;
+}
+
+input[type="range"]:active::-webkit-slider-thumb {
+    transform: scale(1.2);
+    background: #007db5;
+}
+
+input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    background: #007db5;
+    border-radius: 6px;
+}
+
+input[type="range"]::-moz-range-progress {
+    background: #004c70;
+    border: 0;
+    height: 10px;
+    border-radius: 6px;
+}
+
+input[type="range"]::-moz-focus-outer {
+    border: 0;
+}
+
+input[type="range"]::-moz-range-thumb {
+    box-sizing: content-box;
+    border: 1px solid #007db5;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+input[type="range"]:active::-moz-range-thumb {
+    transform: scale(1.2);
+    background: rgba(0, 125, 181, 0.6);
+}
+
+input[type="range"]::-ms-track {
+    width: 100%;
+    height: 3px;
+    cursor: pointer;
+    background: transparent;
+    border: transparent;
+    color: transparent;
+}
+
+input[type="range"]::-ms-fill-lower {
+    background: rgba(0, 125, 181, 0.6);
+}
+
+input[type="range"]::-ms-fill-upper {
+    background: rgba(0, 125, 181, 0.6);
+}
+
+input[type="range"]::-ms-thumb {
+    box-sizing: content-box;
+    border: 0;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+input[type="range"]:active::-ms-thumb {
+    transform: scale(1.2);
+    background: rgba(0, 125, 181, 0.6);
+}
+
+.thumbnail {
+    width: 130px;
+    height: 130px;
+    background-size: cover;
+    border: 1px solid #eee;
+    border-radius: 12px;
+}
